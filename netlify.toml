@@ -1,0 +1,3 @@
+# Netlify Configuration for Pure Static HTML/CSS/JS (Zero Build Step)
+[build]
+  publish = "."
