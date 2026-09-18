@@ -924,6 +924,148 @@ main section#home .hero-content > span:first-of-type:hover {
 }
 
 /* ============================================================
+   SUPERHERO GEAR SHOWCASE (CAPTAIN AMERICA FREE WEIGHTS)
+   ============================================================ */
+.superhero-gear-showcase {
+  margin-top: 3.5rem;
+  width: 100%;
+}
+
+.superhero-gear-card {
+  max-width: 920px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 85, 0, 0.35);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.65),
+    0 0 35px rgba(255, 85, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.superhero-gear-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 28px 60px rgba(0, 0, 0, 0.75),
+    0 0 45px rgba(255, 85, 0, 0.28);
+  border-color: rgba(255, 85, 0, 0.55);
+}
+
+.gear-card-header {
+  padding: 2.25rem 2rem 1.25rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(20, 24, 32, 0.95) 0%, rgba(13, 15, 20, 0.9) 100%);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.gear-heading {
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0.35rem 0 0 0;
+  line-height: 1.2;
+}
+
+.gear-visual-frame {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  background: #080a0d;
+}
+
+@media (min-width: 768px) {
+  .gear-visual-frame {
+    height: 480px;
+  }
+}
+
+.gear-dumbbell-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 32%;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.superhero-gear-card:hover .gear-dumbbell-img {
+  transform: scale(1.04);
+}
+
+.gear-visual-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(10, 12, 16, 0.92) 0%, rgba(10, 12, 16, 0.25) 60%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.gear-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(15, 18, 24, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+}
+
+.gear-star {
+  color: #ff5500;
+  font-size: 1rem;
+}
+
+.gear-card-footer {
+  padding: 1.85rem 2.5rem 2.25rem 2.5rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(13, 15, 20, 0.95) 0%, rgba(18, 22, 30, 0.98) 100%);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.gear-desc {
+  color: #ffffff;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0 auto;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 576px) {
+  .gear-visual-frame {
+    height: 320px;
+  }
+
+  .gear-card-header,
+  .gear-card-footer {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .gear-desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================================
    5. TIMINGS SECTION
    ============================================================ */
 .timings-wrapper {
